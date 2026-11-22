@@ -76,17 +76,17 @@ This page documents the data, validation, and limits of the model, including a d
 ## How it works
 
 ```mermaid
-flowchart LR
-    pdf["Inspection report<br/>or application (PDF)"] -- "Claude extracts features,<br/>with quotes" --> home["House features<br/>roof, vents, eaves, windows…"]
-    home --> vuln["Vulnerability model<br/>trained on 35,026 inspected homes"]
-    addr["Address"] --> hazard["Area hazard<br/>FEMA + CAL FIRE zones + fire history"]
-    vuln --> price["Technical premium"]
-    hazard --> price
-    price --> dec{"Within appetite?"}
+flowchart TD
+    addr["Address"] --> hazard["Area wildfire hazard<br/>FEMA + CAL FIRE zones + fire history"]
+    pdf["Inspection report (PDF)"] -- "Claude reads it" --> home["House features<br/>roof, vents, eaves, windows"]
+    home --> vuln["Vulnerability model<br/>35,026 inspected homes"]
+    hazard --> price["Technical premium"]
+    vuln --> price
+    price --> dec{"Within the insurer's<br/>risk limit?"}
     dec -- yes --> acc["Accept"]
-    dec -- no --> fix["Cheapest retrofit<br/>that fixes it"]
-    fix -- "found" --> cond["Accept with conditions"]
-    fix -- "none works" --> decl["Decline"]
+    dec -- no --> fix["Find the cheapest retrofit"]
+    fix -- "fixes it" --> cond["Accept with conditions"]
+    fix -- "nothing works" --> decl["Decline"]
 ```
 
 **Pricing:**
