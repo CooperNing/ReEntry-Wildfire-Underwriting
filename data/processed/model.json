@@ -1,0 +1,544 @@
+{
+ "version": "2026-11-21",
+ "target": "P(destroyed | wildfire reaches home), average California fire 2013-2025",
+ "intercept_fit": 1.9387,
+ "intercept": 0.5025,
+ "reference_home": {
+  "roof": "asphalt",
+  "eaves": "open",
+  "vents": "coarse",
+  "siding": "noncombustible",
+  "windows": "single",
+  "deck": "none",
+  "fence": "none",
+  "outbuilding": "none_or_unknown",
+  "type": "single_story",
+  "era": "1950_1979",
+  "gap": "10to20m"
+ },
+ "p_reference_home": 0.8742,
+ "p_mean_inspected_home": 0.4111,
+ "score_features": [
+  "roof",
+  "eaves",
+  "vents",
+  "windows",
+  "outbuilding",
+  "type",
+  "era"
+ ],
+ "not_credible": {
+  "siding": "Post-fire coding bias: combustible siding burns away and is under-recorded on destroyed homes.",
+  "deck": "Post-fire coding bias: burned wood decks are often recorded as 'no deck'.",
+  "fence": "Post-fire coding bias: burned wood fences are often recorded as 'no fence'.",
+  "gap": "Coordinates are parcel centroids, so spacing is too coarse to measure."
+ },
+ "features": {
+  "roof": {
+   "label": "Roof covering",
+   "levels": {
+    "metal": {
+     "b": -0.0761,
+     "or": 0.927,
+     "or_lo": 0.827,
+     "or_hi": 1.038,
+     "n": 6041,
+     "share": 0.1725,
+     "destroyed_rate": 0.383,
+     "credible": true,
+     "evidence": "not_significant"
+    },
+    "other": {
+     "b": -0.9605,
+     "or": 0.383,
+     "or_lo": 0.224,
+     "or_hi": 0.653,
+     "n": 183,
+     "share": 0.0052,
+     "destroyed_rate": 0.295,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "tile": {
+     "b": -0.6041,
+     "or": 0.547,
+     "or_lo": 0.49,
+     "or_hi": 0.609,
+     "n": 4910,
+     "share": 0.1402,
+     "destroyed_rate": 0.165,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "wood": {
+     "b": 0.8804,
+     "or": 2.412,
+     "or_lo": 1.775,
+     "or_hi": 3.277,
+     "n": 286,
+     "share": 0.0082,
+     "destroyed_rate": 0.402,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "asphalt": {
+     "b": 0.0,
+     "or": 1.0,
+     "or_lo": 1.0,
+     "or_hi": 1.0,
+     "n": 23606,
+     "share": 0.674,
+     "destroyed_rate": 0.459,
+     "credible": true,
+     "evidence": "reference"
+    }
+   }
+  },
+  "eaves": {
+   "label": "Eaves",
+   "levels": {
+    "enclosed": {
+     "b": -0.4507,
+     "or": 0.637,
+     "or_lo": 0.583,
+     "or_hi": 0.696,
+     "n": 8413,
+     "share": 0.2402,
+     "destroyed_rate": 0.331,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "none": {
+     "b": 0.2809,
+     "or": 1.324,
+     "or_lo": 1.177,
+     "or_hi": 1.49,
+     "n": 3659,
+     "share": 0.1045,
+     "destroyed_rate": 0.477,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "open": {
+     "b": 0.0,
+     "or": 1.0,
+     "or_lo": 1.0,
+     "or_hi": 1.0,
+     "n": 22954,
+     "share": 0.6553,
+     "destroyed_rate": 0.418,
+     "credible": true,
+     "evidence": "reference"
+    }
+   }
+  },
+  "vents": {
+   "label": "Attic / foundation vents",
+   "levels": {
+    "fine": {
+     "b": -0.5621,
+     "or": 0.57,
+     "or_lo": 0.524,
+     "or_hi": 0.62,
+     "n": 8812,
+     "share": 0.2516,
+     "destroyed_rate": 0.369,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "none": {
+     "b": -1.3224,
+     "or": 0.266,
+     "or_lo": 0.239,
+     "or_hi": 0.297,
+     "n": 6690,
+     "share": 0.191,
+     "destroyed_rate": 0.238,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "unscreened": {
+     "b": -0.7051,
+     "or": 0.494,
+     "or_lo": 0.402,
+     "or_hi": 0.607,
+     "n": 978,
+     "share": 0.0279,
+     "destroyed_rate": 0.356,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "coarse": {
+     "b": 0.0,
+     "or": 1.0,
+     "or_lo": 1.0,
+     "or_hi": 1.0,
+     "n": 18546,
+     "share": 0.5295,
+     "destroyed_rate": 0.481,
+     "credible": true,
+     "evidence": "reference"
+    }
+   }
+  },
+  "siding": {
+   "label": "Exterior siding",
+   "levels": {
+    "combustible": {
+     "b": -1.164,
+     "or": 0.312,
+     "or_lo": 0.283,
+     "or_hi": 0.345,
+     "n": 18068,
+     "share": 0.5158,
+     "destroyed_rate": 0.418,
+     "credible": false,
+     "evidence": "not_measurable"
+    },
+    "ignition_resistant": {
+     "b": -1.347,
+     "or": 0.26,
+     "or_lo": 0.213,
+     "or_hi": 0.317,
+     "n": 4096,
+     "share": 0.1169,
+     "destroyed_rate": 0.869,
+     "credible": false,
+     "evidence": "not_measurable"
+    },
+    "noncombustible": {
+     "b": 0.0,
+     "or": 1.0,
+     "or_lo": 1.0,
+     "or_hi": 1.0,
+     "n": 12862,
+     "share": 0.3672,
+     "destroyed_rate": 0.234,
+     "credible": false,
+     "evidence": "not_measurable"
+    }
+   }
+  },
+  "windows": {
+   "label": "Windows",
+   "levels": {
+    "multi": {
+     "b": -0.6366,
+     "or": 0.529,
+     "or_lo": 0.491,
+     "or_hi": 0.57,
+     "n": 20784,
+     "share": 0.5934,
+     "destroyed_rate": 0.369,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "single": {
+     "b": 0.0,
+     "or": 1.0,
+     "or_lo": 1.0,
+     "or_hi": 1.0,
+     "n": 14242,
+     "share": 0.4066,
+     "destroyed_rate": 0.452,
+     "credible": true,
+     "evidence": "reference"
+    }
+   }
+  },
+  "deck": {
+   "label": "Elevated deck",
+   "levels": {
+    "composite": {
+     "b": -1.7075,
+     "or": 0.181,
+     "or_lo": 0.124,
+     "or_hi": 0.266,
+     "n": 556,
+     "share": 0.0159,
+     "destroyed_rate": 0.131,
+     "credible": false,
+     "evidence": "not_measurable"
+    },
+    "masonry": {
+     "b": 0.0941,
+     "or": 1.099,
+     "or_lo": 0.986,
+     "or_hi": 1.224,
+     "n": 3744,
+     "share": 0.1069,
+     "destroyed_rate": 0.299,
+     "credible": false,
+     "evidence": "not_measurable"
+    },
+    "wood": {
+     "b": -0.4311,
+     "or": 0.65,
+     "or_lo": 0.596,
+     "or_hi": 0.708,
+     "n": 11584,
+     "share": 0.3307,
+     "destroyed_rate": 0.383,
+     "credible": false,
+     "evidence": "not_measurable"
+    },
+    "none": {
+     "b": 0.0,
+     "or": 1.0,
+     "or_lo": 1.0,
+     "or_hi": 1.0,
+     "n": 19142,
+     "share": 0.5465,
+     "destroyed_rate": 0.444,
+     "credible": false,
+     "evidence": "not_measurable"
+    }
+   }
+  },
+  "fence": {
+   "label": "Fence attached to house",
+   "levels": {
+    "combustible": {
+     "b": -1.0295,
+     "or": 0.357,
+     "or_lo": 0.324,
+     "or_hi": 0.393,
+     "n": 8277,
+     "share": 0.2363,
+     "destroyed_rate": 0.248,
+     "credible": false,
+     "evidence": "not_measurable"
+    },
+    "noncombustible": {
+     "b": -0.3492,
+     "or": 0.705,
+     "or_lo": 0.644,
+     "or_hi": 0.772,
+     "n": 9346,
+     "share": 0.2668,
+     "destroyed_rate": 0.43,
+     "credible": false,
+     "evidence": "not_measurable"
+    },
+    "none": {
+     "b": 0.0,
+     "or": 1.0,
+     "or_lo": 1.0,
+     "or_hi": 1.0,
+     "n": 17403,
+     "share": 0.4969,
+     "destroyed_rate": 0.462,
+     "credible": false,
+     "evidence": "not_measurable"
+    }
+   }
+  },
+  "outbuilding": {
+   "label": "Nearest outbuilding",
+   "levels": {
+    "30to50": {
+     "b": 0.004,
+     "or": 1.004,
+     "or_lo": 0.851,
+     "or_hi": 1.184,
+     "n": 1746,
+     "share": 0.0498,
+     "destroyed_rate": 0.492,
+     "credible": true,
+     "evidence": "not_significant"
+    },
+    "gt50": {
+     "b": 0.2543,
+     "or": 1.29,
+     "or_lo": 1.086,
+     "or_hi": 1.531,
+     "n": 1472,
+     "share": 0.042,
+     "destroyed_rate": 0.425,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "lt30": {
+     "b": 0.2626,
+     "or": 1.3,
+     "or_lo": 1.165,
+     "or_hi": 1.451,
+     "n": 4027,
+     "share": 0.115,
+     "destroyed_rate": 0.557,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "none_or_unknown": {
+     "b": 0.0,
+     "or": 1.0,
+     "or_lo": 1.0,
+     "or_hi": 1.0,
+     "n": 27781,
+     "share": 0.7932,
+     "destroyed_rate": 0.374,
+     "credible": true,
+     "evidence": "reference"
+    }
+   }
+  },
+  "type": {
+   "label": "Structure type",
+   "levels": {
+    "mobile": {
+     "b": 1.1552,
+     "or": 3.175,
+     "or_lo": 2.728,
+     "or_hi": 3.694,
+     "n": 3981,
+     "share": 0.1137,
+     "destroyed_rate": 0.777,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "multi_story": {
+     "b": -0.4023,
+     "or": 0.669,
+     "or_lo": 0.615,
+     "or_hi": 0.727,
+     "n": 11434,
+     "share": 0.3264,
+     "destroyed_rate": 0.229,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "single_story": {
+     "b": 0.0,
+     "or": 1.0,
+     "or_lo": 1.0,
+     "or_hi": 1.0,
+     "n": 19611,
+     "share": 0.5599,
+     "destroyed_rate": 0.429,
+     "credible": true,
+     "evidence": "reference"
+    }
+   }
+  },
+  "era": {
+   "label": "Year built",
+   "levels": {
+    "1980_2007": {
+     "b": -0.158,
+     "or": 0.854,
+     "or_lo": 0.767,
+     "or_hi": 0.95,
+     "n": 7711,
+     "share": 0.2202,
+     "destroyed_rate": 0.483,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "2008_plus": {
+     "b": -0.59,
+     "or": 0.554,
+     "or_lo": 0.432,
+     "or_hi": 0.712,
+     "n": 803,
+     "share": 0.0229,
+     "destroyed_rate": 0.294,
+     "credible": true,
+     "evidence": "significant"
+    },
+    "pre1950": {
+     "b": 0.0645,
+     "or": 1.067,
+     "or_lo": 0.963,
+     "or_hi": 1.182,
+     "n": 6849,
+     "share": 0.1955,
+     "destroyed_rate": 0.362,
+     "credible": true,
+     "evidence": "not_significant"
+    },
+    "unknown": {
+     "b": 0.1464,
+     "or": 1.158,
+     "or_lo": 0.992,
+     "or_hi": 1.351,
+     "n": 7781,
+     "share": 0.2221,
+     "destroyed_rate": 0.204,
+     "credible": true,
+     "evidence": "not_significant"
+    },
+    "1950_1979": {
+     "b": 0.0,
+     "or": 1.0,
+     "or_lo": 1.0,
+     "or_hi": 1.0,
+     "n": 11882,
+     "share": 0.3392,
+     "destroyed_rate": 0.514,
+     "credible": true,
+     "evidence": "reference"
+    }
+   }
+  },
+  "gap": {
+   "label": "Distance to nearest other home",
+   "levels": {
+    "20to40m": {
+     "b": -0.3414,
+     "or": 0.711,
+     "or_lo": 0.649,
+     "or_hi": 0.778,
+     "n": 14850,
+     "share": 0.424,
+     "destroyed_rate": 0.451,
+     "credible": false,
+     "evidence": "not_measurable"
+    },
+    "gt40m": {
+     "b": -0.1961,
+     "or": 0.822,
+     "or_lo": 0.736,
+     "or_hi": 0.918,
+     "n": 10311,
+     "share": 0.2944,
+     "destroyed_rate": 0.358,
+     "credible": false,
+     "evidence": "not_measurable"
+    },
+    "lt10m": {
+     "b": -0.1444,
+     "or": 0.866,
+     "or_lo": 0.665,
+     "or_hi": 1.127,
+     "n": 689,
+     "share": 0.0197,
+     "destroyed_rate": 0.47,
+     "credible": false,
+     "evidence": "not_measurable"
+    },
+    "unknown": {
+     "b": -0.6379,
+     "or": 0.528,
+     "or_lo": 0.064,
+     "or_hi": 4.368,
+     "n": 10,
+     "share": 0.0003,
+     "destroyed_rate": 0.1,
+     "credible": false,
+     "evidence": "not_measurable"
+    },
+    "10to20m": {
+     "b": 0.0,
+     "or": 1.0,
+     "or_lo": 1.0,
+     "or_hi": 1.0,
+     "n": 9166,
+     "share": 0.2617,
+     "destroyed_rate": 0.371,
+     "credible": false,
+     "evidence": "not_measurable"
+    }
+   }
+  }
+ }
+}

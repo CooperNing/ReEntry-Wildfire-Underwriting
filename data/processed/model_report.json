@@ -1,0 +1,202 @@
+{
+ "rows": 35026,
+ "fires": 45,
+ "destroyed_rate": 0.4031,
+ "cv": {
+  "logistic_pooled_auc": 0.637,
+  "gbm_pooled_auc": 0.6351,
+  "logistic_within_fire_auc": 0.6278,
+  "gbm_within_fire_auc": 0.646,
+  "logistic_brier": 0.2475
+ },
+ "rows_before_complete_case": 82233,
+ "leakage": {
+  "pooled_auc_with_unknown": 0.8222,
+  "by_feature": {
+   "roof": {
+    "unknown_destroyed": 0.278,
+    "observed_destroyed": 0.616,
+    "unknown_share": 0.169
+   },
+   "eaves": {
+    "unknown_destroyed": 0.726,
+    "observed_destroyed": 0.425,
+    "unknown_share": 0.446
+   },
+   "vents": {
+    "unknown_destroyed": 0.597,
+    "observed_destroyed": 0.541,
+    "unknown_share": 0.329
+   },
+   "siding": {
+    "unknown_destroyed": 0.262,
+    "observed_destroyed": 0.62,
+    "unknown_share": 0.17
+   },
+   "windows": {
+    "unknown_destroyed": 0.546,
+    "observed_destroyed": 0.564,
+    "unknown_share": 0.271
+   },
+   "deck": {
+    "unknown_destroyed": 0.574,
+    "observed_destroyed": 0.552,
+    "unknown_share": 0.324
+   },
+   "fence": {
+    "unknown_destroyed": 0.527,
+    "observed_destroyed": 0.572,
+    "unknown_share": 0.289
+   }
+  }
+ },
+ "calibration": [
+  {
+   "dec": 0,
+   "pred": 0.0893,
+   "obs": 0.2164,
+   "n": 3503
+  },
+  {
+   "dec": 1,
+   "pred": 0.1703,
+   "obs": 0.2852,
+   "n": 3503
+  },
+  {
+   "dec": 2,
+   "pred": 0.231,
+   "obs": 0.3358,
+   "n": 3502
+  },
+  {
+   "dec": 3,
+   "pred": 0.29,
+   "obs": 0.3757,
+   "n": 3503
+  },
+  {
+   "dec": 4,
+   "pred": 0.3537,
+   "obs": 0.3824,
+   "n": 3502
+  },
+  {
+   "dec": 5,
+   "pred": 0.4197,
+   "obs": 0.4353,
+   "n": 3503
+  },
+  {
+   "dec": 6,
+   "pred": 0.4912,
+   "obs": 0.4389,
+   "n": 3502
+  },
+  {
+   "dec": 7,
+   "pred": 0.5749,
+   "obs": 0.4616,
+   "n": 3503
+  },
+  {
+   "dec": 8,
+   "pred": 0.6774,
+   "obs": 0.4949,
+   "n": 3502
+  },
+  {
+   "dec": 9,
+   "pred": 0.8135,
+   "obs": 0.6052,
+   "n": 3503
+  }
+ ],
+ "top_fires": [
+  {
+   "fire": "Camp 2018",
+   "homes": 9233,
+   "destroyed": 0.9519
+  },
+  {
+   "fire": "Eaton 2025",
+   "homes": 6690,
+   "destroyed": 0.1747
+  },
+  {
+   "fire": "Palisades 2025",
+   "homes": 4714,
+   "destroyed": 0.2314
+  },
+  {
+   "fire": "Caldor 2021",
+   "homes": 2737,
+   "destroyed": 0.1414
+  },
+  {
+   "fire": "Glass 2020",
+   "homes": 1832,
+   "destroyed": 0.0961
+  },
+  {
+   "fire": "Dixie 2021",
+   "homes": 1401,
+   "destroyed": 0.0985
+  },
+  {
+   "fire": "Mountain 2024",
+   "homes": 977,
+   "destroyed": 0.0461
+  },
+  {
+   "fire": "Park 2024",
+   "homes": 728,
+   "destroyed": 0.1044
+  },
+  {
+   "fire": "North Complex 2020",
+   "homes": 650,
+   "destroyed": 0.5062
+  },
+  {
+   "fire": "Carr 2018",
+   "homes": 587,
+   "destroyed": 0.6899
+  },
+  {
+   "fire": "LNU Lightning Cmplx 2020",
+   "homes": 522,
+   "destroyed": 0.5651
+  },
+  {
+   "fire": "CZU Lightning Cmplx 2020",
+   "homes": 372,
+   "destroyed": 0.5941
+  },
+  {
+   "fire": "Creek 2020",
+   "homes": 354,
+   "destroyed": 0.7994
+  },
+  {
+   "fire": "SQF Complex 2020",
+   "homes": 340,
+   "destroyed": 0.2294
+  },
+  {
+   "fire": "Woolsey 2018",
+   "homes": 328,
+   "destroyed": 0.3384
+  }
+ ],
+ "years": [
+  2018,
+  2019,
+  2020,
+  2021,
+  2022,
+  2023,
+  2024,
+  2025
+ ]
+}

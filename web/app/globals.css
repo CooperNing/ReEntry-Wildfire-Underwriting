@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f5f1;
+  --surface: #ffffff;
+  --surface-2: #faf9f6;
+  --ink: #1d1c1a;
+  --muted: #6a665f;
+  --line: #e3e0d8;
+  --ember: #c2410c;
+  --ember-soft: #fdf0e7;
+  --accept: #15803d;
+  --accept-soft: #e8f6ed;
+  --cond: #a16207;
+  --cond-soft: #fcf4dc;
+  --decline: #b91c1c;
+  --decline-soft: #fceaea;
+  --info: #1d4ed8;
+  --info-soft: #e9effd;
+  /* hazard bands: ordinal one-hue ramp, validated (dataviz validate_palette --ordinal) */
+  --hz-1: #eea06b; --hz-2: #e07434; --hz-3: #bb4f17; --hz-4: #83300a;
+  /* decision status (always shipped with icon + label) */
+  --st-good: #0ca30c; --st-warn: #fab219; --st-crit: #d03b3b;
+  --grid: #ebe8e1;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #131210;
+    --surface: #1c1b18;
+    --surface-2: #22211d;
+    --ink: #eeeae2;
+    --muted: #a39e94;
+    --line: #34322d;
+    --ember: #fb8a4c;
+    --ember-soft: #3a2216;
+    --accept: #4ade80;
+    --accept-soft: #173222;
+    --cond: #facc15;
+    --cond-soft: #352d10;
+    --decline: #f87171;
+    --decline-soft: #3a1818;
+    --info: #93b4ff;
+    --info-soft: #1b2440;
+    --hz-1: #9a3b0e; --hz-2: #c9561c; --hz-3: #ec7a3a; --hz-4: #f5a774;
+    --grid: #2c2a26;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-line: var(--line);
+  --color-ember: var(--ember);
+  --color-ember-soft: var(--ember-soft);
+  --color-accept: var(--accept);
+  --color-accept-soft: var(--accept-soft);
+  --color-cond: var(--cond);
+  --color-cond-soft: var(--cond-soft);
+  --color-decline: var(--decline);
+  --color-decline-soft: var(--decline-soft);
+  --color-info: var(--info);
+  --color-info-soft: var(--info-soft);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+}
+
+.num { font-variant-numeric: tabular-nums; }
+
+.card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.label {
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--muted);
+  font-weight: 600;
+}
+
+select, input[type="text"], input[type="number"] {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 6px 10px;
+  color: var(--ink);
+}
+select:focus, input:focus { outline: 2px solid var(--ember); outline-offset: 1px; }
+
+input[type="range"] { accent-color: var(--ember); width: 100%; }
+
+.leaflet-container { background: var(--surface-2); font-family: inherit; }
