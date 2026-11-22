@@ -2,6 +2,8 @@
 
 **A decision tool that helps California home insurers decide which wildfire-area homes to insure again, at what price, and on what conditions.**
 
+### [▶ Try the live demo](https://reentry-underwriting.vercel.app) · [Jump straight to an example home](https://reentry-underwriting.vercel.app/underwrite?address=5555%20Skyway%2C%20Paradise%2C%20CA%2095969)
+
 Built on public government data: 130,000+ CAL FIRE damage inspections, FEMA risk estimates, and California Department of Insurance market data. Inspired by the "Uninsurable" theme of the UCLA Anderson MSBA Vibathon 2026.
 
 ![ReEntry overview page](docs/screenshots/overview.png)
